@@ -33,7 +33,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Qpn-zd-Drx" secondAttribute="height" multiplier="35:118" id="2aO-D6-TPN"/>
+                                    <constraint firstAttribute="width" secondItem="Qpn-zd-Drx" secondAttribute="height" multiplier="35:118" id="f54-oc-w9b"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehg-e0-eSx">
@@ -57,9 +57,9 @@
                         <color key="backgroundColor" red="0.13449793781725883" green="0.13449793781725883" blue="0.13449793781725883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ehg-e0-eSx" secondAttribute="bottom" constant="50" id="4hW-13-3xc"/>
+                            <constraint firstItem="Qpn-zd-Drx" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="70:409" id="7Y5-cE-Nhf"/>
                             <constraint firstItem="Qpn-zd-Drx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ANx-02-bMZ"/>
                             <constraint firstItem="Qpn-zd-Drx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ZdR-tk-xua"/>
-                            <constraint firstItem="Qpn-zd-Drx" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.577017" id="aOI-CJ-6hz"/>
                             <constraint firstItem="ehg-e0-eSx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sRa-KA-uf5"/>
                         </constraints>
                     </view>

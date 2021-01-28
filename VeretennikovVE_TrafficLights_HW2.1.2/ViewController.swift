@@ -9,29 +9,25 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  var isStartButtonPressed = false
-  
-  let redColorWithAlpha = UIColor.red.withAlphaComponent(0.1)
-  let yellowColorWithAlpha = UIColor.yellow.withAlphaComponent(0.1)
-  let greenColorWithAlpha = UIColor.green.withAlphaComponent(0.1)
-  
   @IBOutlet weak var redView: UIView!
   @IBOutlet weak var yellowView: UIView!
   @IBOutlet weak var greenView: UIView!
   @IBOutlet weak var startButton: UIButton!
   
+  var isStartButtonPressed = false
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    redView.backgroundColor = redColorWithAlpha
-    yellowView.backgroundColor = yellowColorWithAlpha
-    greenView.backgroundColor = greenColorWithAlpha
-    
-    startButton.layer.cornerRadius = 20
+    redView.alpha = 0.1
+    yellowView.alpha = 0.1
+    greenView.alpha = 0.1
   }
   
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
+  override func viewWillLayoutSubviews() {
+    super.viewWillLayoutSubviews()
+    
+    startButton.layer.cornerRadius = 20
     
     redView.layer.cornerRadius = redView.frame.height / 2
     yellowView.layer.cornerRadius = yellowView.bounds.height / 2
@@ -39,25 +35,22 @@ class ViewController: UIViewController {
   }
 
   @IBAction func startButtonPressed() {
-    if redView.backgroundColor == UIColor.red {
-      yellowView.backgroundColor = .yellow
-      redView.backgroundColor = redColorWithAlpha
-    } else if yellowView.backgroundColor == UIColor.yellow {
-      greenView.backgroundColor = .green
-      yellowView.backgroundColor = yellowColorWithAlpha
-    } else if greenView.backgroundColor == UIColor.green{
-      redView.backgroundColor = .red
-      greenView.backgroundColor = greenColorWithAlpha
+    if redView.alpha == 1 {
+      yellowView.alpha = 1
+      redView.alpha = 0.1
+    } else if yellowView.alpha == 1 {
+      greenView.alpha = 1
+      yellowView.alpha = 0.1
+    } else if greenView.alpha == 1{
+      redView.alpha = 1
+      greenView.alpha = 0.1
     }
       
     if isStartButtonPressed == false {
       isStartButtonPressed.toggle()
       startButton.setTitle("NEXT", for: .normal)
-      redView.backgroundColor = .red
+      redView.alpha = 1
     }
-    
-    
   }
-  
 }
 
